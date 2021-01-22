@@ -1,0 +1,5 @@
+---
+- name: Configure borgbackup package
+  package:
+    name: "{{ borgbackup_package_name }}"
+    state: "{{ borgbackup_package_state }}"

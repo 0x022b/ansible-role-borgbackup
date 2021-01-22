@@ -1,0 +1,19 @@
+---
+name: Ansible Galaxy
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  import:
+    name: Import role
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: 0x022b/galaxy-role-import-action@v1
+        with:
+          galaxy_api_key: ${{ secrets.galaxy_api_key }}

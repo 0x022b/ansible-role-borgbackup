@@ -1,0 +1,35 @@
+---
+galaxy_info:
+  role_name: borgbackup
+  author: Janne K
+  description: Configures borgbackup package
+  license: license (MIT)
+  min_ansible_version: 2.9
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Fedora
+      versions:
+        - 32
+        - 33
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+  galaxy_tags:
+    - borgbackup
+    - centos
+    - debian
+    - fedora
+    - redhat
+    - rhel
+    - ubuntu
+
+dependencies:
+  - role: 0x022b.epel
